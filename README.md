@@ -31,6 +31,7 @@ module "example" {
 	 service_budget_end  = ""
 	 service_budget_include_other  = false
 	 service_budget_include_support  = false
+	 service_budget_include_tax  = true
 	 service_budget_limit  = 100
 	 service_budget_limit_unit  = "USD"
 	 service_budget_notification_type  = "ACTUAL"
@@ -53,30 +54,31 @@ module "example" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_account_budget_comparison_operator"></a> [account\_budget\_comparison\_operator](#input\_account\_budget\_comparison\_operator) | n/a | `string` | `"GREATER_THAN"` | no |
-| <a name="input_account_budget_end"></a> [account\_budget\_end](#input\_account\_budget\_end) | n/a | `string` | `""` | no |
-| <a name="input_account_budget_include_other"></a> [account\_budget\_include\_other](#input\_account\_budget\_include\_other) | n/a | `bool` | `false` | no |
-| <a name="input_account_budget_include_support"></a> [account\_budget\_include\_support](#input\_account\_budget\_include\_support) | n/a | `bool` | `false` | no |
-| <a name="input_account_budget_include_tax"></a> [account\_budget\_include\_tax](#input\_account\_budget\_include\_tax) | n/a | `bool` | `true` | no |
-| <a name="input_account_budget_limit"></a> [account\_budget\_limit](#input\_account\_budget\_limit) | n/a | `number` | `100` | no |
-| <a name="input_account_budget_limit_unit"></a> [account\_budget\_limit\_unit](#input\_account\_budget\_limit\_unit) | n/a | `string` | `"USD"` | no |
-| <a name="input_account_budget_notification_type"></a> [account\_budget\_notification\_type](#input\_account\_budget\_notification\_type) | n/a | `string` | `"ACTUAL"` | no |
-| <a name="input_account_budget_start"></a> [account\_budget\_start](#input\_account\_budget\_start) | n/a | `string` | `"2023-01-01_00:00"` | no |
-| <a name="input_account_budget_subscriber_email_addresses"></a> [account\_budget\_subscriber\_email\_addresses](#input\_account\_budget\_subscriber\_email\_addresses) | n/a | `string` | `"pda.ambrosio@gmail.com"` | no |
-| <a name="input_account_budget_threshold"></a> [account\_budget\_threshold](#input\_account\_budget\_threshold) | n/a | `number` | `100` | no |
-| <a name="input_account_budget_threshold_type"></a> [account\_budget\_threshold\_type](#input\_account\_budget\_threshold\_type) | n/a | `string` | `"PERCENTAGE"` | no |
-| <a name="input_account_name"></a> [account\_name](#input\_account\_name) | n/a | `string` | `"My Account"` | no |
-| <a name="input_service_budget_comparison_operator"></a> [service\_budget\_comparison\_operator](#input\_service\_budget\_comparison\_operator) | n/a | `string` | `"GREATER_THAN"` | no |
-| <a name="input_service_budget_end"></a> [service\_budget\_end](#input\_service\_budget\_end) | n/a | `string` | `""` | no |
-| <a name="input_service_budget_include_other"></a> [service\_budget\_include\_other](#input\_service\_budget\_include\_other) | n/a | `bool` | `false` | no |
-| <a name="input_service_budget_include_support"></a> [service\_budget\_include\_support](#input\_service\_budget\_include\_support) | n/a | `bool` | `false` | no |
-| <a name="input_service_budget_limit"></a> [service\_budget\_limit](#input\_service\_budget\_limit) | n/a | `number` | `100` | no |
-| <a name="input_service_budget_limit_unit"></a> [service\_budget\_limit\_unit](#input\_service\_budget\_limit\_unit) | n/a | `string` | `"USD"` | no |
-| <a name="input_service_budget_notification_type"></a> [service\_budget\_notification\_type](#input\_service\_budget\_notification\_type) | n/a | `string` | `"ACTUAL"` | no |
-| <a name="input_service_budget_start"></a> [service\_budget\_start](#input\_service\_budget\_start) | n/a | `string` | `"2023-01-01_00:00"` | no |
-| <a name="input_service_budget_subscriber_email_addresses"></a> [service\_budget\_subscriber\_email\_addresses](#input\_service\_budget\_subscriber\_email\_addresses) | n/a | `string` | `"pda.ambrosio@gmail.com"` | no |
-| <a name="input_service_budget_threshold"></a> [service\_budget\_threshold](#input\_service\_budget\_threshold) | n/a | `number` | `100` | no |
-| <a name="input_service_budget_threshold_type"></a> [service\_budget\_threshold\_type](#input\_service\_budget\_threshold\_type) | n/a | `string` | `"PERCENTAGE"` | no |
+| <a name="input_account_budget_comparison_operator"></a> [account\_budget\_comparison\_operator](#input\_account\_budget\_comparison\_operator) | the comparison operator for the account budget | `string` | `"GREATER_THAN"` | no |
+| <a name="input_account_budget_end"></a> [account\_budget\_end](#input\_account\_budget\_end) | the end date of the account budget | `string` | `""` | no |
+| <a name="input_account_budget_include_other"></a> [account\_budget\_include\_other](#input\_account\_budget\_include\_other) | include other in the account budget | `bool` | `false` | no |
+| <a name="input_account_budget_include_support"></a> [account\_budget\_include\_support](#input\_account\_budget\_include\_support) | include support in the account budget | `bool` | `false` | no |
+| <a name="input_account_budget_include_tax"></a> [account\_budget\_include\_tax](#input\_account\_budget\_include\_tax) | include tax in the account budget | `bool` | `true` | no |
+| <a name="input_account_budget_limit"></a> [account\_budget\_limit](#input\_account\_budget\_limit) | value of the account budget limit | `number` | `100` | no |
+| <a name="input_account_budget_limit_unit"></a> [account\_budget\_limit\_unit](#input\_account\_budget\_limit\_unit) | value of the account budget limit unit | `string` | `"USD"` | no |
+| <a name="input_account_budget_notification_type"></a> [account\_budget\_notification\_type](#input\_account\_budget\_notification\_type) | the notification type for the account budget | `string` | `"ACTUAL"` | no |
+| <a name="input_account_budget_start"></a> [account\_budget\_start](#input\_account\_budget\_start) | the start date of the account budget | `string` | `"2023-01-01_00:00"` | no |
+| <a name="input_account_budget_subscriber_email_addresses"></a> [account\_budget\_subscriber\_email\_addresses](#input\_account\_budget\_subscriber\_email\_addresses) | the subscriber email addresses for the account budget | `string` | `"pda.ambrosio@gmail.com"` | no |
+| <a name="input_account_budget_threshold"></a> [account\_budget\_threshold](#input\_account\_budget\_threshold) | the threshold for the account budget | `number` | `100` | no |
+| <a name="input_account_budget_threshold_type"></a> [account\_budget\_threshold\_type](#input\_account\_budget\_threshold\_type) | the threshold type for the account budget | `string` | `"PERCENTAGE"` | no |
+| <a name="input_account_name"></a> [account\_name](#input\_account\_name) | value of the account name | `string` | `"My Account"` | no |
+| <a name="input_service_budget_comparison_operator"></a> [service\_budget\_comparison\_operator](#input\_service\_budget\_comparison\_operator) | the comparison operator for the service budget | `string` | `"GREATER_THAN"` | no |
+| <a name="input_service_budget_end"></a> [service\_budget\_end](#input\_service\_budget\_end) | the end date of the service budget | `string` | `""` | no |
+| <a name="input_service_budget_include_other"></a> [service\_budget\_include\_other](#input\_service\_budget\_include\_other) | include other for the service budget | `bool` | `false` | no |
+| <a name="input_service_budget_include_support"></a> [service\_budget\_include\_support](#input\_service\_budget\_include\_support) | include support for the service budget | `bool` | `false` | no |
+| <a name="input_service_budget_include_tax"></a> [service\_budget\_include\_tax](#input\_service\_budget\_include\_tax) | include tax for the service budget | `bool` | `true` | no |
+| <a name="input_service_budget_limit"></a> [service\_budget\_limit](#input\_service\_budget\_limit) | value of the service budget limit | `number` | `100` | no |
+| <a name="input_service_budget_limit_unit"></a> [service\_budget\_limit\_unit](#input\_service\_budget\_limit\_unit) | value of the service budget limit unit | `string` | `"USD"` | no |
+| <a name="input_service_budget_notification_type"></a> [service\_budget\_notification\_type](#input\_service\_budget\_notification\_type) | the notification type for the service budget | `string` | `"ACTUAL"` | no |
+| <a name="input_service_budget_start"></a> [service\_budget\_start](#input\_service\_budget\_start) | the start date of the service budget | `string` | `"2023-01-01_00:00"` | no |
+| <a name="input_service_budget_subscriber_email_addresses"></a> [service\_budget\_subscriber\_email\_addresses](#input\_service\_budget\_subscriber\_email\_addresses) | the subscriber email addresses for the service budget | `string` | `"pda.ambrosio@gmail.com"` | no |
+| <a name="input_service_budget_threshold"></a> [service\_budget\_threshold](#input\_service\_budget\_threshold) | the threshold for the service budget | `number` | `100` | no |
+| <a name="input_service_budget_threshold_type"></a> [service\_budget\_threshold\_type](#input\_service\_budget\_threshold\_type) | the threshold type for the service budget | `string` | `"PERCENTAGE"` | no |
 ## Outputs
 
 | Name | Description |
